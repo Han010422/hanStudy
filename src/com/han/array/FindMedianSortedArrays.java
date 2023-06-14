@@ -15,14 +15,11 @@ public class FindMedianSortedArrays {
     public static void main(String[] args) {
         int []nums1 = new int[]{1,2};
         int []nums2 = new int[]{3,4};
-        Solution4 solution4 = new Solution4();
-        double medianSortedArrays = solution4.findMedianSortedArrays(nums1, nums2);
+        double medianSortedArrays = FindMedianSortedArrays.findMedianSortedArrays(nums1, nums2);
         System.out.println(medianSortedArrays);
     }
-}
 
-class Solution4 {
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    private static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] result = new int[(nums1.length+nums2.length)/2+1];
         int i=0,j=0;
         for(int z=0;z<result.length;z++){

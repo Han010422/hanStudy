@@ -9,13 +9,10 @@ package com.han.array;
 public class LongestCommonPrefix {
     public static void main(String[] args) {
         String[] str = new String[]{"flower","flow","flight"};
-        Solution14 solution14 = new Solution14();
-        System.out.println(solution14.longestCommonPrefix(str));
+        System.out.println(LongestCommonPrefix.longestCommonPrefix(str));
     }
-}
 
-class Solution14 {
-    public String longestCommonPrefix(String[] strs) {
+    private static String longestCommonPrefix(String[] strs) {
         String commonStr = "";
         for(int i=0;i<strs[0].length();i++){
             char c = strs[0].charAt(i);

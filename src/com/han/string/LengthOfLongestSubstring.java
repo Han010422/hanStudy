@@ -15,13 +15,11 @@ import java.util.Map;
 public class LengthOfLongestSubstring {
     public static void main(String[] args) {
         String s = "zwnigfunjwz";
-        Solution3 solution3 = new Solution3();
-        System.out.println(solution3.lengthOfLongestSubstring(s));
+        System.out.println(LengthOfLongestSubstring
+                .lengthOfLongestSubstring(s));
     }
-}
 
-class Solution3 {
-    public int lengthOfLongestSubstring(String s) {
+    private static int lengthOfLongestSubstring(String s) {
         Map<Character,Integer> map = new HashMap<>();
         //记录当前末尾字符
         char c = '\u0000';

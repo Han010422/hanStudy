@@ -26,14 +26,10 @@ import java.util.Map;
 public class IntToRoman {
     public static void main(String[] args) {
         int num = 10;
-        Solution12 solution12 = new Solution12();
-        //System.out.println((int)Math.pow(10,0));
-        System.out.println(solution12.intToRoman(num));
+        System.out.println(IntToRoman.intToRoman(num));
     }
-}
 
-class Solution12 {
-    public String intToRoman(int num) {
+    private static String intToRoman(int num) {
         Map<Integer,String> map = new HashMap<>();
         map.put(1,"I");
         map.put(2,"II");

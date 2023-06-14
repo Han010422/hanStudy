@@ -31,13 +31,10 @@ public class AddTwoNumbers {
                 listNode2 = new ListNode(Integer.valueOf(nums2.substring(i-1,i)),listNode2);
             }
         }
-        Solution2 solution2 = new Solution2();
-        ListNode listNode = solution2.addTwoNumbers(listNode1, listNode2);
+        ListNode listNode = AddTwoNumbers.addTwoNumbers(listNode1, listNode2);
     }
-}
 
-class Solution2 {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         String nums1= "";
         String nums2= "";
         while (l1.next != null){
@@ -50,7 +47,7 @@ class Solution2 {
             l2 = l2.next;
         }
         nums2=nums2+l2.val;
-        String nums3 = Solution2.add(new StringBuilder(nums1).reverse().toString(),new StringBuilder(nums2).reverse().toString());
+        String nums3 = AddTwoNumbers.add(new StringBuilder(nums1).reverse().toString(),new StringBuilder(nums2).reverse().toString());
         ListNode listNode = new ListNode();
         for (int i = 1; i <= nums3.length(); i++) {
             if(i<=1){
@@ -62,7 +59,7 @@ class Solution2 {
         return listNode;
     }
 
-    public static String add(String num1, String num2) {
+    private static String add(String num1, String num2) {
         int len1 = num1.length(), len2 = num2.length();
         int carry = 0;
         StringBuilder sb = new StringBuilder();
@@ -76,7 +73,6 @@ class Solution2 {
         return sb.reverse().toString();
     }
 }
-
 class ListNode {
     int val;
     ListNode next;

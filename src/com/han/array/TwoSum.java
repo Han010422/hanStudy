@@ -19,13 +19,10 @@ public class TwoSum {
     public static void main(String[] args) {
         int[] nums = {2,7,11,15};
         int target = 9;
-        Solution1 solution = new Solution1();
-        System.out.println(Arrays.toString(solution.twoSum(nums,target)));
+        System.out.println(Arrays.toString(TwoSum.twoSum(nums,target)));
     }
-}
 
-class Solution1 {
-    public int[] twoSum(int[] nums, int target) {
+    private static int[] twoSum(int[] nums, int target) {
         //将数组的值作为key下标作为value存入map，遍历数组同时查找map中有无与当前数组元素相加等于target的key
         //若有直接返回当前数组下标和map中存的下标，若无将当前数组的值作为key下标作为value存入map
         Map<Integer,Integer> map = new HashMap<>();

@@ -13,13 +13,10 @@ package com.han.string;
 public class ReverseInteger {
     public static void main(String[] args) {
         int num = -123;
-        Solution7 solution7 = new Solution7();
-        System.out.println(solution7.reverse(num));
+        System.out.println(ReverseInteger.reverse(num));
     }
-}
 
-class Solution7 {
-    public int reverse(int x) {
+    private static int reverse(int x) {
         String str1 = x>0?x+"":(x+"").substring(1);
         String str2 = "";
         for(int i=str1.length()-1;i>=0;i--){

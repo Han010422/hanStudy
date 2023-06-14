@@ -14,23 +14,21 @@ package com.han.string;
 public class IsPalindrome {
     public static void main(String[] args) {
         int num = -123321;
-        Solution9 solution9 = new Solution9();
-        System.out.println(solution9.isPalindrome(num));
+        System.out.println(IsPalindrome.isPalindrome(num));
     }
-}
-class Solution9 {
-    public boolean isPalindrome(int x) {
+
+    private static boolean isPalindrome(int x) {
         boolean b = true;
         if(x<0){
             b=false;
         }else {
-              String str = x+"";
-              for(int i=0,j=str.length()-1;i<str.length()/2;i++,j--){
-                  if(str.charAt(i)!=str.charAt(j)){
-                      b=false;
-                      break;
-                  }
-              }
+            String str = x+"";
+            for(int i=0,j=str.length()-1;i<str.length()/2;i++,j--){
+                if(str.charAt(i)!=str.charAt(j)){
+                    b=false;
+                    break;
+                }
+            }
         }
         return b;
     }

@@ -13,12 +13,10 @@ package com.han.string;
 public class LongestPalindrome {
     public static void main(String[] args) {
         String s = "cbbd";
-        Solution5 solution5 = new Solution5();
-        System.out.println(solution5.longestPalindrome(s));
+        System.out.println(LongestPalindrome.longestPalindrome(s));
     }
-}
-class Solution5{
-    public String longestPalindrome(String s) {
+
+    private static String longestPalindrome(String s) {
         if(s.length()==1){
             return s;
         }
